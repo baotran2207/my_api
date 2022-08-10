@@ -53,7 +53,8 @@ class AppSettings(BaseSettings):
 
 
     # Dynamo
-    DYNAMO_TABLE_NAME = os.environ.get('APP_TABLE_NAME', '')
+    DYNAMO_TABLE_NAME:str = os.environ.get('APP_TABLE_NAME', '')
+    DYNAMODB_STREAM_ARN:str = os.environ.get('DYNAMODB_STREAM_ARN', '')
 
 
 settings = AppSettings()
